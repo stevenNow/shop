@@ -1,23 +1,23 @@
 const state = {
-    hasAbandonedItems: true
+  hasAbandonedItems: true,
 };
 
 const mutations = {
-    setHasAbandonedItems(state, hasAbandonedItems) {
-        state.hasAbandonedItems = hasAbandonedItems;
-    }
+  setHasAbandonedItems(state, hasAbandonedItems) {
+    state.hasAbandonedItems = hasAbandonedItems;
+  },
 };
 
 const actions = {};
 
 const getters = {
-    getHasAbandonedItems: (state) => state.hasAbandonedItems,
+  getHasAbandonedItems: (state) => state.hasAbandonedItems,
 };
 
 export default {
-    namespaced: true,
-    state,
-    mutations,
-    actions,
-    getters
+  namespaced: true,
+  state,
+  mutations,
+  actions,
+  getters,
 };

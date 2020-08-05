@@ -1,36 +1,40 @@
 <template>
   <a-form
-      id="components-form-demo-normal-login"
-      :form="form"
-      class="login-form"
-      @submit="handleSubmit"
+    id="components-form-demo-normal-login"
+    :form="form"
+    class="login-form"
+    @submit="handleSubmit"
   >
     <a-form-item>
       <a-input
-          v-decorator="[
+        v-decorator="[
           'userName',
-          { rules: [{ required: true, message: 'Please input your username!' }] },
+          {
+            rules: [{ required: true, message: 'Please input your username!' }],
+          },
         ]"
-          placeholder="Username"
+        placeholder="Username"
       >
-        <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
+        <a-icon slot="prefix" type="user" style="color: rgba(0, 0, 0, 0.25);" />
       </a-input>
     </a-form-item>
     <a-form-item>
       <a-input
-          v-decorator="[
+        v-decorator="[
           'password',
-          { rules: [{ required: true, message: 'Please input your Password!' }] },
+          {
+            rules: [{ required: true, message: 'Please input your Password!' }],
+          },
         ]"
-          type="password"
-          placeholder="Password"
+        type="password"
+        placeholder="Password"
       >
-        <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
+        <a-icon slot="prefix" type="lock" style="color: rgba(0, 0, 0, 0.25);" />
       </a-input>
     </a-form-item>
     <a-form-item>
       <a-checkbox
-          v-decorator="[
+        v-decorator="[
           'remember',
           {
             valuePropName: 'checked',
@@ -58,12 +62,12 @@
 export default {
   name: "Login",
   beforeCreate() {
-    this.form = this.$form.createForm(this, { name: 'normal_login' });
+    this.form = this.$form.createForm(this, { name: "normal_login" });
   },
   methods: {
     handleSubmit(e) {
       e.preventDefault();
-      this.$router.replace({name: "main"});
+      this.$router.replace({ name: "main" });
     },
   },
 };
