@@ -25,12 +25,25 @@
           </a-input>
         </a-form-item>
       </a-col>
+      <a-row type="flex" :gutter="[12, 1]">
+        <a-col :offset="18" :span="3">
+          <a-upload
+            name="file"
+            :multiple="true"
+            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+            :headers="headers"
+            @change="handleChange"
+          >
+            <a-button> <a-icon type="upload" /> Upload Image </a-button>
+          </a-upload>
+        </a-col>
 
-      <a-col :offset="22" :span="2">
-        <a-button type="primary" class="create" size="large">
-          Create
-        </a-button>
-      </a-col>
+        <a-col :span="3">
+          <a-button type="primary" class="create">
+            Create Message
+          </a-button>
+        </a-col>
+      </a-row>
     </a-row>
   </a-form>
 </template>
@@ -52,6 +65,6 @@ export default {
   margin-right: 10% !important;
 }
 .create {
-  float: right;
+  width: 100% !important;
 }
 </style>
